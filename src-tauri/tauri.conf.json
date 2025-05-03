@@ -12,16 +12,45 @@
 	"app": {
 		"windows": [
 			{
-				"title": "XChatGPT",
+				"label": "main",
+				"visible": false,
 				"width": 635,
-				"height":770,
-				"resizable": true,
+				"height": 770,
+				"resizable": false,
+				"fullscreen": false,
+				"decorations": false
+			},
+			{
+				"label": "splashscreen",
+				"url": "/splashscreen",
+				"title": "XChatGPT",
+				"width": 780,
+				"height": 480,
+				"resizable": false,
+				"fullscreen": false,
+				"decorations": false,
+				"center": true,
+				"alwaysOnTop": true,
+				"transparent": true
+			},
+			{
+				"label": "xespan",
+				"url": "/xespan",
+				"visible": false,
+				"width": 400,
+				"height": 211,
+				"resizable": false,
 				"fullscreen": false,
 				"decorations": false
 			}
 		],
+
 		"security": {
-			"csp": null
+			"csp": "default-src 'self'; img-src 'self' asset: https://asset.localhost",
+			"assetProtocol": {
+				"enable": true,
+				"scope": []
+			}
 		}
 	},
 	"bundle": {

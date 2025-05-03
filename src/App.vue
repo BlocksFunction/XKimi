@@ -3,10 +3,16 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-	<div class="bg-white w-screen h-screen">
-		<div class="" data-tauri-drag-region><button>a</button></div>
+	<div class="">
 		<RouterView />
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+* {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+</style>
